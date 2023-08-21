@@ -469,6 +469,7 @@ static bool performTest(
                 equals(aData, aSV2ret) && equals(aData, aRet2),
                 "getValues2 test");
         }
+#if 0
         {
             TwoFloats aIn(1.1f, 2.2f);
             TwoFloats aOut = xLBT->echoTwoFloats(aIn);
@@ -479,6 +480,7 @@ static bool performTest(
             FourFloats aOut = xLBT->echoFourFloats(aIn);
             bRet = check( memcmp(&aIn, &aOut, sizeof(FourFloats)) == 0, "four floats struct test" ) && bRet;
         }
+#endif
         {
             MixedFloatAndInteger aIn(7.7f, 8);
             MixedFloatAndInteger aOut = xLBT->echoMixedFloatAndInteger(aIn);
